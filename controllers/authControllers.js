@@ -5,7 +5,7 @@ import usermodel from "../models/usermodel.js";
 import { transporter } from "../config/nodeMailer.js";
 
 export const register = async (req, res) => {
-  // const { name, email, password } = req.body;
+  const { name, email, password } = req.body;
   if (!name || !email || !password) {
     return res.json({ sucess: false, message: "Details are missing" });
   }
